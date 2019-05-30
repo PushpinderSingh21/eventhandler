@@ -1,0 +1,68 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="img/favicon.png" type="image/png">
+        <title>Eventonaire</title>
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/linericon/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/owl-carousel/owl.carousel.min.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/lightbox/simpleLightbox.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/nice-select/css/nice-select.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/animate-css/animate.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    </head>
+    <body>
+
+        <!--================Header Menu Area =================-->
+        <header class="header_area">
+            <div class="main_menu">
+            	<nav class="navbar navbar-expand-lg navbar-light">
+					<div class="container box_1620">
+						<a class="navbar-brand logo_h" href="/"><img src="{% static 'img/logo.png' %}" alt=""></a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+
+							{% if user.is_authenticated %}
+							<ul class="nav navbar-nav menu_nav ml-auto">
+
+								<li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
+								<li class="nav-item"><a class="nav-link" href="about">About</a></li>
+								<li class="nav-item"><a class="nav-link" href="candidate">Panel</a></li>
+								<li class="nav-item"><a class="nav-link" href="schedule">Schedule</a>
+								<li class="nav-item"><a class="nav-link" href="venue">Venue</a>
+								<li class="nav-item"><a class="nav-link" href="blog">Blog</a></li>
+								<li class="nav-item"><a class="nav-link" href="contact">Contact</a></li>
+
+							</ul>
+
+							<ul class="nav navbar-nav navbar-right">
+								<li class="nav-item"><a href="logout" class="tickets_btn">Logout</a></li>
+
+								{% else %}
+								<ul class="nav navbar-nav menu_nav ml-auto">
+								<li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
+								<li class="nav-item"><a class="nav-link" href="about">About</a></li>
+								<li class="nav-item"><a class="nav-link" href="schedule">Schedule</a>
+								<li class="nav-item"><a class="nav-link" href="venue">Venue</a>
+								<li class="nav-item"><a class="nav-link" href="blog">Blog</a></li>
+								<li class="nav-item"><a class="nav-link" href="contact">Contact</a></li>
+
+							</ul>
+
+								<li class="nav-item"><a href="login" class="tickets_btn">Log In</a></li>
+								{% endif %}
+								</ul>
+						</div>
+					</div>
+            	</nav>
+            </div>
+        </header>

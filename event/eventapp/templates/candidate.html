@@ -1,0 +1,86 @@
+{% load static %}
+        {% include 'header.html' %}
+        <!--================Home Banner Area =================-->
+        <section class="banner_area">
+            <div class="banner_inner d-flex align-items-center">
+            	<div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
+				<div class="container">
+					<div class="banner_content text-center">
+						{% if user.is_authenticated %}
+						<h2>Hello {{request.user}}</h2>
+						{% endif %}
+					</div>
+				</div>
+            </div>
+        </section>
+        <!--================End Home Banner Area =================-->
+        
+        <!--================Team Area =================-->
+        <section class="team_area p_120">
+        	<div class="container">
+        		<div class="row team_inner">
+        			<div class="col-lg-4 col-sm-5">
+        				<div class="team_item">
+        					<div class="team_img">
+								<a href="createevent"><img class="img-fluid" src="{% static '/img/candidate/create.jpg' %}" alt=""></a>
+        					</div>
+        					<div class="team_name" >
+								<h4><a href="createevent">Create Event </a></h4>
+        					</div>
+        				</div>
+        			</div>
+        			<div class="col-lg-4 col-sm-5">
+        				<div class="team_item">
+        					<div class="team_img">
+								<a href="technical"><img class="img-fluid" src="{% static '/img/candidate/22819.jpg' %}" alt=""></a>
+        					</div>
+        					<div class="team_name">
+        						<h4><a href="technical">Technical Events </a></h4>
+        					</div>
+        				</div>
+        			</div>
+        			<div class="col-lg-4 col-sm-5">
+        				<div class="team_item">
+        					<div class="team_img">
+								<a href="nontech"><img class="img-fluid" a href="nontech" src="{% static '/img/candidate/non.jpg' %}" alt=""></a>
+        					</div>
+        					<div class="team_name">
+								<h4><a href="nontech">Non-Technical Events </a></h4>
+        					</div>
+        				</div>
+        			</div>
+        			<div class="col-lg-4 col-sm-5">
+        				<div class="team_item">
+        					<div class="team_img">
+								<a href="cultural"><img class="img-fluid" src="{% static '/img/candidate/index.png' %}" alt=""></a>
+        					</div>
+        					<div class="team_name">
+								<h4><a href="cultural">Cultural Events </a></h4>
+        					</div>
+        				</div>
+        			</div>
+        			<div class="col-lg-4 col-sm-5">
+        				<div class="team_item">
+        					<div class="team_img">
+								<a href="contact"><img class="img-fluid" src="{% static '/img/candidate/help.png' %}" alt=""></a>
+        					</div>
+        					<div class="team_name">
+								<h4><a href="contact">Help and Support </a></h4>
+        					</div>
+        				</div>
+        			</div>
+        			<div class="col-lg-4 col-sm-5">
+        				<div class="team_item">
+        					<div class="team_img">
+								<a href="contact"><img class="img-fluid" src="{% static '/img/candidate/feed.jpg' %}" alt=""></a>
+        					</div>
+        					<div class="team_name">
+								<h4><a href="contact">Feedback </a></h4>
+        					</div>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        </section>
+        <!--================End Team Area =================-->
+        {% include 'footer.html' %}
